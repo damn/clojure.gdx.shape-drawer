@@ -1,4 +1,4 @@
-(defproject space.earlygrey.shape-drawer "2.5.0"
+(defproject gdl.graphics.shape-drawer "2.5.0"
   :repositories [["jitpack" "https://jitpack.io"]]
   :dependencies [[org.clojure/clojure "1.12.0"]
                  [com.badlogic.gdx "1.13.5"]
