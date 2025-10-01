@@ -13,6 +13,12 @@
 (defn set-default-line-width! [^ShapeDrawer this width]
   (.setDefaultLineWidth this width))
 
+(defmacro with-line-width [shape-drawer width & exprs]
+  `(let [old-line-width# (default-line-width ~shape-drawer)]
+     (set-default-line-width! ~shape-drawer (* ~width old-line-width#))
+     ~@exprs
+    (set-default-line-width! ~shape-drawer old-line-width#)))
+
 (defn arc! [^ShapeDrawer this center-x center-y radius start-radians radians]
   (.arc this center-x center-y radius start-radians radians))
 
