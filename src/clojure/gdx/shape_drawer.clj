@@ -17,7 +17,7 @@
   `(let [old-line-width# (default-line-width ~shape-drawer)]
      (set-default-line-width! ~shape-drawer (* ~width old-line-width#))
      ~@exprs
-    (set-default-line-width! ~shape-drawer old-line-width#)))
+     (set-default-line-width! ~shape-drawer old-line-width#)))
 
 (defn arc! [^ShapeDrawer this center-x center-y radius start-radians radians]
   (.arc this center-x center-y radius start-radians radians))
